@@ -351,21 +351,24 @@
                     </li>
                 </ul>
             </div>
-           
-            <form class="form" name="footer-form" autocomplete="off">
-                <label class="footer-form-field">
-                    <span class="footer-form-label">Subscribe</span>
-                  <input
-                    class="form-input"
-                    type="text"
-                    name="username"
-                  />
-                </label>
-                <button class="form-button" type="submit">Subscribe</button>
-                <svg class="modal-name" width="24" height="24">
-                    <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-            </form>
+            <div class="footer-part-three">
+                <p class="footer-form-title">Subscribe</p>
+                <form class="footer-form" name="footer-form" autocomplete="off">
+                      <label class="footer-form-label">
+                          <input
+                            class="footer-form-input"
+                            type="email"
+                            name="email"
+                            placeholder="E-mail"
+                          />
+                      </label>
+                
+                    <button class="footer-form-button" type="submit">Subscribe <svg class="footer-form-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-send"></use>
+                    </svg></button>
+                    
+                </form>
+            </div>
 
         </div>
     </footer>
@@ -415,15 +418,15 @@
                     <span class="modal-form-label">Comment</span>
                     <textarea class="modal-form-textarea" name="comment" rows="5" placeholder="Text input"></textarea>
                 </label>
-                <label>
-                    <input type="checkbox">
+                <label class="modal-agre-label">
+                    <input type="checkbox" class="modal-agre-check visually-hidden">
                     <span class="modal-icon-agre-box">
                         <svg class="modal-icon-agre" width="10" height="8">
                             <use href="./images/icons.svg#icon-vector"></use>
                         </svg>
                     </span>
-                    <span class="">
-                        I accept the terms and conditions of the <a href="" class="modal-link link">Privacy Policy</a>
+                    <span class="modal-form-text-agre">
+                        I accept the terms and conditions of the <a href="" class="modal-link-agre link">Privacy Policy</a>
                         
                     </span>
                 </label>
