@@ -17,6 +17,10 @@
     --modal-close: #2E2F42;
     --modal-close-hover: #FFFFFF;
     --modal-label: #8E8F99;
+    --modal-input-hover: #4D5AE5;
+    --modal-input-text: #2E2F42;
+    --modal-input-icon: #2E2F42;
+    --modal-input-icon-hover: #4D5AE5;
 }
 
 body{
@@ -549,7 +553,14 @@ img {
 
 .form {
 }
-.form-label {
+
+.modal-form-field {
+    position: relative;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.modal-form-label {
     display: block;
     margin-bottom: 4px;
     color: var(--modal-label);
@@ -560,10 +571,91 @@ img {
     line-height: 14px;
     letter-spacing: 0.48px;
 }
-.form-input {
+
+
+.modal-form-input {
+    width: 100%;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    padding: 11px 38px;
+    outline: transparent;
+    font-size: 18px;
+    transition: border-color 150ms ease-in-out 1000ms;
+    color: var(--modal-input-text);
 }
-.modal-name {
+
+.modal-form-input:focus {
+    border-color: var(--modal-input-hover);
 }
+
+.modal-icon {
+    position: absolute;
+    left: 16px;
+    bottom: 11px;
+    fill: var(--modal-input-icon);
+    transition: fill 150ms ease-in-out 1000ms;
+}
+.modal-form-input:focus + .modal-icon {
+    fill: var(--modal-input-icon-hover);
+}
+.modal-form-textarea {
+    width: 100%;
+    resize: none;
+    outline: transparent;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    transition: border-color 150ms ease-in-out 1000ms;
+    padding: 8px 16px;
+}
+.modal-form-textarea::placeholder {
+    color: rgba(46, 47, 66, 0.40);
+    font-size: 12px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.48px;
+}
+.modal-form-textarea:focus {
+    border-color: var(--modal-input-hover);
+}
+.modal-icon-agre-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+}
+.form-button {
+    background-color: var(--logo-color);
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none; 
+    border-radius: 4px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button:hover,
+.form-button:focus {
+    background-color: var(--hover-list-color);
+}
+
 
 /* PORTFOLIO */
 .portfolio-page::after {
