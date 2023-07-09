@@ -468,6 +468,7 @@ img {
     background-color: var(--hover-footer-bg-links);
 }
 .footer-part-three{
+    margin-left: 80px;
     display: flex;
     flex-direction: column;
 }
